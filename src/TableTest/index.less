@@ -1,0 +1,47 @@
+.resize-table {
+    .react-resizable {
+        position: relative;
+    }
+
+    .react-resizable-handle {
+        position: absolute;
+        z-index: 1;
+        // z-index: 999;
+        top: 8px;
+        right: 0px;
+        width: 6px;
+        height: calc(100% - 16px);
+        cursor: col-resize;
+        border-right: 1px solid #E5E6EB;
+        // border-right: 1px solid red;
+
+        &:hover {
+            // border-color: var(--colorPrimary);
+        }
+
+        &.active {
+            border-color: pink;
+            z-index: 999;
+        }
+    }
+
+    .ofs-table-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .ofs-table-cell-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .ofs-table-cell {
+        // padding: 0 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
